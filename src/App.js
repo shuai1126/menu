@@ -1,10 +1,9 @@
-import './App.css';
-import Header from './Headers'
-import Process from './Process'
+import TopBanners from './components/top-banner'
+import Process from './pages/detail'
 function App() {
   return (
     <div className="App">
-     <Header />
+     <TopBanners />
     <Process />
     </div>
   );
