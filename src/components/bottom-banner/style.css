@@ -1,0 +1,26 @@
+footer {
+   
+}
+.item{
+    position: relative;
+    text-align: center;
+    line-height: 18px;
+}
+
+#menu{
+    display:flex;
+    justify-content: space-around;
+}
+
+#bottom{
+    box-sizing: border-box;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    padding: 5px;
+    left: 0;
+    background-color: #fff;
+    border-top: 0.5px solid lightgray;
+    overflow: hidden;
+    z-index: 999;
+}

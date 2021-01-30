@@ -1,7 +1,11 @@
 .home-content {
   position: relative;
-  top: 46px;
+  top: 52px;
+  bottom: 56px;
   margin: 5px;
+  height: calc(100vh - 56px);
+  overflow-y: auto;
+  /* margin-top: 10px; */
 }
 .home-tinyTitle {
   display: flex;
@@ -27,6 +31,20 @@
 
 .hot-recipe {
   margin-top: 10px;
+}
+.good-dishes {
+  display: flex;
+  align-items: center;
+}
+.good-dishes span{
+  
+  display: inline-block;
+}
+.good-dishes .line {
+  width: 40%;
+  height: 0.5px;
+  background-color: #6b6b6b;
+  /* margin: 0; */
 }
 svg {
   height: 30px;
