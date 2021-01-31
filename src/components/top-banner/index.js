@@ -5,7 +5,7 @@ export default memo(function TopBanner() {
 
   return (
     <div className="top-banner">
-      <h1 className="app-title">菜谱大全</h1>
+      <div className="app-title" style={{fonSize:"15px"}}>菜谱大全</div>
     </div>
   )
 })

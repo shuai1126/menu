@@ -1,0 +1,27 @@
+.whole{
+    display: flex;
+    overflow: hidden;
+   .icon{
+        width: 50px;
+        height: 42px;
+        box-shadow: 0px 0 10px #95c1fa;
+        .return{
+            margin-top: 8px;
+            justify-content: center;
+        }
+    }
+    .htab{
+        margin: 10px 10px; 
+        margin-right: 5px; 
+        border-radius: 5px;
+        box-shadow: 0px 0 10px #b3989f;
+        overflow: hidden;
+    } 
+    .vtab{
+        height: 50px;
+        display: flex; 
+        align-items: center;
+        justify-content: center;
+        background-color: #fff
+    }
+}

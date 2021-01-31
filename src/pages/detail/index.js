@@ -1,5 +1,5 @@
 import React, { Component, Fragment } from 'react';
-
+import Nav from "../../components/Nav/nav";
 import './style.css';
 
 class Process extends Component {
@@ -72,6 +72,7 @@ class Process extends Component {
   render() {
     return (
       <Fragment>
+        <Nav />
         {/*<Header> </Header>*/}
         <section>
           <img className="process-img" src="http://s1.cdn.xiangha.com/caipu/201508/3114/311447245823.jpg/NjQweDA.webp"></img>

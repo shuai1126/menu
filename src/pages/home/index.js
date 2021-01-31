@@ -1,9 +1,10 @@
 import React, { Component } from 'react';
 import './style.css';
-
 import TopBanner from '../../components/top-banner';
 import HomeMenuHeader from '../../components/home-menu-header';
-export default class Home extends Component {
+import { withRouter } from "react-router-dom";
+
+class Home extends Component {
   constructor(props) {
     super(props);
     this.state = {
@@ -105,7 +106,7 @@ export default class Home extends Component {
           <div className="home-tinyTitle">
             {tinyTitle.map((item) => {
               return (
-                <div className="tt">
+                <div className="tt" key={item.id}>
                   {item.img}
                   <p>{item.name}</p>
                 </div>
@@ -119,7 +120,7 @@ export default class Home extends Component {
             <div className="hr-scroll">
               {hotRecipe.map((item) => (
                 <div key={item.id}>
-                  <img src={item.img} alt="" srcset="" />
+                  <img src={item.img} alt="" srcSet="" />
                   <p>{item.name}</p>
                 </div>
               ))}
@@ -133,7 +134,7 @@ export default class Home extends Component {
             <div className="hr-scroll">
               {hotRecipe.map((item) => (
                 <div key={item.id}>
-                  <img src={item.img} alt="" srcset="" />
+                  <img src={item.img} alt="" srcSet="" />
                   <p>{item.name}</p>
                 </div>
               ))}
@@ -141,9 +142,9 @@ export default class Home extends Component {
           </div>
           {/* 精选菜品 */}
           <div className="good-dishes">
-            <span class="line"></span>
+            <span className="line"></span>
             <span>精选推荐</span>
-            <span class="line"></span>
+            <span className="line"></span>
           </div>
           {/* 占位  */}
           <div style={{height: '58px'}}>
@@ -154,3 +155,5 @@ export default class Home extends Component {
     );
   }
 }
+
+export default withRouter(Home);
