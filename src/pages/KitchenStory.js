@@ -16,7 +16,7 @@ export default class KitChenStory extends Component {
                         </p>
                         <img
                             className="info-img"
-                            src={require("../assets/images/dish_one.jpg")}
+                            src={require("../assets/images/dish_one.jpg").default}
                             alt=""
                         />
                         <p className="from-info">
@@ -29,7 +29,7 @@ export default class KitChenStory extends Component {
                         </p>
                         <img
                             className="info-img"
-                            src={require("../assets/images/dish_one.jpg")}
+                            src={require("../assets/images/dish_one.jpg").default}
                             alt=""
                         />
                         <p className="from-info">
@@ -42,7 +42,7 @@ export default class KitChenStory extends Component {
                         </p>
                         <img
                             className="info-img"
-                            src={require("../assets/images/dish_one.jpg")}
+                            src={require("../assets/images/dish_one.jpg").default}
                             alt=""
                         />
                         <p className="from-info">
@@ -55,7 +55,7 @@ export default class KitChenStory extends Component {
                         </p>
                         <img
                             className="info-img"
-                            src={require("../assets/images/dish_one.jpg")}
+                            src={require("../assets/images/dish_one.jpg").default}
                             alt=""
                         />
                         <p className="from-info">

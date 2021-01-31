@@ -22,7 +22,7 @@ export default class Meat extends React.Component{
             <div>
                 <Nav />
                 <div className="top">
-                    <img alt="" src={require("../assets/images/meat.jpg")}/>
+                    <img alt="" src={require("../assets/images/meat.jpg").default}/>
                     <div className="info">
                         <h1>肉类</h1>
                         <p>肉类，是动物的皮下组织及肌肉，可以食用。
@@ -37,7 +37,7 @@ export default class Meat extends React.Component{
                             dishes.slice(0,2).map((item,index)=>{
                                 return(
                                     <div key={index}>
-                                        <img src={require("../assets/images/"+item.pic+".jpg")} alt="" />
+                                        <img src={require("../assets/images/"+item.pic+".jpg").default} alt="" />
                                         <h3>{item.name}</h3>
                                         <h4>{item.didCount}&nbsp;人做过&nbsp;&nbsp;&nbsp;<StarTwoTone />&nbsp;{item.collect}</h4>
                                     </div>
@@ -50,7 +50,7 @@ export default class Meat extends React.Component{
                             dishes.slice(2,4).map((item,index)=>{
                                 return(
                                     <div key={index}>
-                                        <img src={require("../assets/images/"+item.pic+".jpg")} alt="" />
+                                        <img src={require("../assets/images/"+item.pic+".jpg").default} alt="" />
                                         <h3>{item.name}</h3>
                                         <h4>{item.didCount}&nbsp;人做过&nbsp;&nbsp;&nbsp;<StarTwoTone />&nbsp;{item.collect}</h4>
                                     </div>
@@ -63,7 +63,7 @@ export default class Meat extends React.Component{
                             dishes.slice(4,6).map((item,index)=>{
                                 return(
                                     <div key={index}>
-                                        <img src={require("../assets/images/"+item.pic+".jpg")} alt="" />
+                                        <img src={require("../assets/images/"+item.pic+".jpg").default} alt="" />
                                         <h3>{item.name}</h3>
                                         <h4>{item.didCount}&nbsp;人做过&nbsp;&nbsp;&nbsp;<StarTwoTone />&nbsp;{item.collect}</h4>
                                     </div>
@@ -76,7 +76,7 @@ export default class Meat extends React.Component{
                             dishes.slice(6,8).map((item,index)=>{
                                 return(
                                     <div key={index}>
-                                        <img src={require("../assets/images/"+item.pic+".jpg")} alt="" />
+                                        <img src={require("../assets/images/"+item.pic+".jpg").default} alt="" />
                                         <h3>{item.name}</h3>
                                         <h4>{item.didCount}&nbsp;人做过&nbsp;&nbsp;&nbsp;<StarTwoTone />&nbsp;{item.collect}</h4>
                                     </div>

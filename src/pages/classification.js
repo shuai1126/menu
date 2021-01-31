@@ -31,7 +31,7 @@ export default class Classification extends Component {
                                 width: "22px",
                                 height: "22px"
                             }}
-                            src={require("../assets/images/kefu.png")}
+                            src={require("../assets/images/kefu.png").default}
                             alt=""
                         />
                     </div>

@@ -33,7 +33,7 @@ class Home extends Component {
                                 width: "22px",
                                 height: "22px"
                             }}
-                            src={require("../assets/images/kefu.png")}
+                            src={require("../assets/images/kefu.png").default}
                             alt=""
                         />
                     </div>
@@ -42,28 +42,28 @@ class Home extends Component {
                     <div className="choose-type">
                         <div className="type-box" onClick={() => {this.props.history.push("/classification"); }}>
                             <img
-                                src={require("../assets/images/type_1.png")}
+                                src={require("../assets/images/type_1.png").default}
                                 alt="" 
                             />
                             <p>菜谱分类</p>
                         </div>
                         <div className="type-box">
                             <img
-                                src={require("../assets/images/type_2.png")}
+                                src={require("../assets/images/type_2.png").default}
                                 alt=""
                             />
                             <p>西餐分类</p>
                         </div>
                         <div className="type-box">
                             <img
-                                src={require("../assets/images/type_3.png")}
+                                src={require("../assets/images/type_3.png").default}
                                 alt=""
                             />
                             <p>厨房用具</p>
                         </div>
                         <div className="type-box">
                             <img
-                                src={require("../assets/images/type_4.png")}
+                                src={require("../assets/images/type_4.png").default}
                                 alt=""
                             />
                             <p>中西厨房</p>
@@ -92,7 +92,7 @@ class Home extends Component {
                                         }}
                                     >
                                         <img
-                                            src={require("../assets/images/sea-food.jpg")}
+                                            src={require("../assets/images/sea-food.jpg").default}
                                             alt=""
                                             style={{
                                                 width: "100%",
@@ -117,7 +117,7 @@ class Home extends Component {
                             <h4>每日推荐</h4>
                             <div className="day-box">
                                 <img
-                                    src={require("../assets/images/dish_one.jpg")}
+                                    src={require("../assets/images/dish_one.jpg").default}
                                     alt=""
                                 />
                                 <div className="dish-info">
@@ -125,7 +125,7 @@ class Home extends Component {
                                     <div className="bottom">
                                         <div className="author-box">
                                             <img
-                                                src={require("../assets/images/auto_1.jpg")}
+                                                src={require("../assets/images/auto_1.jpg").default}
                                                 alt=""
                                             />
                                             <span className="aut-name">
@@ -141,7 +141,7 @@ class Home extends Component {
                             </div>
                             <div className="day-box">
                                 <img
-                                    src={require("../assets/images/special.jpg")}
+                                    src={require("../assets/images/special.jpg").default}
                                     alt=""
                                 />
                                 <div className="dish-info">
@@ -149,7 +149,7 @@ class Home extends Component {
                                     <div className="bottom">
                                         <div className="author-box">
                                             <img
-                                                src={require("../assets/images/auto_1.jpg")}
+                                                src={require("../assets/images/auto_1.jpg").default}
                                                 alt=""
                                             />
                                             <span className="aut-name">

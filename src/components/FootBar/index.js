@@ -79,7 +79,7 @@ class FootBar extends Component {
                                 width: "22px",
                                 height: "22px"
                             }}
-                            src={require("../../assets/images/chufang.png")}
+                            src={require("../../assets/images/chufang.png").default}
                             alt=""
                         />
                     }
@@ -89,7 +89,7 @@ class FootBar extends Component {
                                 width: "22px",
                                 height: "22px"
                             }}
-                            src={require("../../assets/images/chufang_act.png")}
+                            src={require("../../assets/images/chufang_act.png").default}
                             alt=""
                         />
                     }

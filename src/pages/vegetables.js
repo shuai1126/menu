@@ -28,7 +28,7 @@ export default class Vegetables extends Component{
             <div>
                 <Nav />
                 <div className="top">
-                    <img alt="" src={require("../assets/images/vegetables.jpg")}/>
+                    <img alt="" src={require("../assets/images/vegetables.jpg").default}/>
                     <div className="info">
                         <h1>蔬菜</h1>
                         <p>蔬菜是指可以做菜、烹饪成为食品的一类植物或菌类，蔬菜是人们日常饮食中必不可少的食物之一。
@@ -44,7 +44,7 @@ export default class Vegetables extends Component{
                             dishes.slice(0,2).map((item,index)=>{
                                 return(
                                     <div key={index}>
-                                        <img src={require("../assets/images/"+item.pic+".jpg")} alt="" />
+                                        <img src={require("../assets/images/"+item.pic+".jpg").default} alt="" />
                                         <h3>{item.name}</h3>
                                         <h4>{item.didCount}&nbsp;人做过&nbsp;&nbsp;&nbsp;<StarTwoTone />&nbsp;{item.collect}</h4>
                                     </div>
@@ -57,7 +57,7 @@ export default class Vegetables extends Component{
                             dishes.slice(2,4).map((item,index)=>{
                                 return(
                                     <div key={index}>
-                                        <img src={require("../assets/images/"+item.pic+".jpg")} alt="" />
+                                        <img src={require("../assets/images/"+item.pic+".jpg").default} alt="" />
                                         <h3>{item.name}</h3>
                                         <h4>{item.didCount}&nbsp;人做过&nbsp;&nbsp;&nbsp;<StarTwoTone />&nbsp;{item.collect}</h4>
                                     </div>
@@ -70,7 +70,7 @@ export default class Vegetables extends Component{
                             dishes.slice(4,6).map((item,index)=>{
                                 return(
                                     <div key={index}>
-                                        <img src={require("../assets/images/"+item.pic+".jpg")} alt="" />
+                                        <img src={require("../assets/images/"+item.pic+".jpg").default} alt="" />
                                         <h3>{item.name}</h3>
                                         <h4>{item.didCount}&nbsp;人做过&nbsp;&nbsp;&nbsp;<StarTwoTone />&nbsp;{item.collect}</h4>
                                     </div>
@@ -83,7 +83,7 @@ export default class Vegetables extends Component{
                             dishes.slice(6,8).map((item,index)=>{
                                 return(
                                     <div key={index}>
-                                        <img src={require("../assets/images/"+item.pic+".jpg")} alt="" />
+                                        <img src={require("../assets/images/"+item.pic+".jpg").default} alt="" />
                                         <h3>{item.name}</h3>
                                         <h4>{item.didCount}&nbsp;人做过&nbsp;&nbsp;&nbsp;<StarTwoTone />&nbsp;{item.collect}</h4>
                                     </div>

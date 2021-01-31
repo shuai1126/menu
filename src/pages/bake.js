@@ -22,7 +22,7 @@ export default class Bake extends React.Component{
             <div>
                 <Nav />
                 <div className="top">
-                    <img alt="" src={require("../assets/images/bake.jpg")}/>
+                    <img alt="" src={require("../assets/images/bake.jpg").default}/>
                     <div className="info">
                         <h1>烘焙</h1>
                         <p>烘焙食品它是以面粉、酵母、食盐、砂糖和水为基本原料，添加适量油脂、乳品、鸡蛋、添加剂等，经一系列复杂的工艺手段烘焙而成的方便食品。
@@ -36,7 +36,7 @@ export default class Bake extends React.Component{
                             dishes.slice(0,2).map((item,index)=>{
                                 return(
                                     <div key={index}>
-                                        <img src={require("../assets/images/"+item.pic+".jpg")} alt="" />
+                                        <img src={require("../assets/images/"+item.pic+".jpg").default} alt="" />
                                         <h3>{item.name}</h3>
                                         <h4>{item.didCount}&nbsp;人做过&nbsp;&nbsp;&nbsp;<StarTwoTone />&nbsp;{item.collect}</h4>
                                     </div>
@@ -49,7 +49,7 @@ export default class Bake extends React.Component{
                             dishes.slice(2,4).map((item,index)=>{
                                 return(
                                     <div key={index}>
-                                        <img src={require("../assets/images/"+item.pic+".jpg")} alt="" />
+                                        <img src={require("../assets/images/"+item.pic+".jpg").default} alt="" />
                                         <h3>{item.name}</h3>
                                         <h4>{item.didCount}&nbsp;人做过&nbsp;&nbsp;&nbsp;<StarTwoTone />&nbsp;{item.collect}</h4>
                                     </div>
@@ -62,7 +62,7 @@ export default class Bake extends React.Component{
                             dishes.slice(4,6).map((item,index)=>{
                                 return(
                                     <div key={index}>
-                                        <img src={require("../assets/images/"+item.pic+".jpg")} alt="" />
+                                        <img src={require("../assets/images/"+item.pic+".jpg").default} alt="" />
                                         <h3>{item.name}</h3>
                                         <h4>{item.didCount}&nbsp;人做过&nbsp;&nbsp;&nbsp;<StarTwoTone />&nbsp;{item.collect}</h4>
                                     </div>
@@ -75,7 +75,7 @@ export default class Bake extends React.Component{
                             dishes.slice(6,8).map((item,index)=>{
                                 return(
                                     <div key={index}>
-                                        <img src={require("../assets/images/"+item.pic+".jpg")} alt="" />
+                                        <img src={require("../assets/images/"+item.pic+".jpg").default} alt="" />
                                         <h3>{item.name}</h3>
                                         <h4>{item.didCount}&nbsp;人做过&nbsp;&nbsp;&nbsp;<StarTwoTone />&nbsp;{item.collect}</h4>
                                     </div>
