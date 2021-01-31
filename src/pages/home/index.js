@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import './style.css';
-import TopBanner from '../../components/top-banner';
+import Nav from "../../components/Nav/nav";
 import HomeMenuHeader from '../../components/home-menu-header';
 import { withRouter } from "react-router-dom";
 
@@ -125,7 +125,7 @@ class Home extends Component {
     const { tinyTitle, hotRecipe } = this.state;
     return (
       <div>
-        <TopBanner></TopBanner>
+        <Nav></Nav>
         <div className="home-content">
           <div className="ReactCarousel">
             <div className="contain">
