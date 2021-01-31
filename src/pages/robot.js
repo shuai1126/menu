@@ -3,6 +3,8 @@ import "../styles/robot.scss";
 import swal from 'sweetalert';
 import $ from "jquery";
 import Nav from "../components/Nav/nav";
+import imagea from "../assets/images/kefu.png";
+import imageb from "../assets/images/boy.jpg";
 
 var Words;
 var TalkWords;
@@ -34,7 +36,7 @@ export default class Robot extends Component{
             }
         }
         
-        str = '<div class="btalk"><span>' + TalkWords.value +'</span>&nbsp;<img src="../assets/images/boy.jpg" width="30" height="30"/></div>' ;
+        str = '<div class="btalk"><span>' + TalkWords.value +'</span>&nbsp;<img src='+ imageb +' width="30" height="30"/></div></div><div class="clear"></div>' ;
     
         // 将之前的内容与要发的内容拼接好 提交
         Words.innerHTML = Words.innerHTML + str;
@@ -44,13 +46,13 @@ export default class Robot extends Component{
                 console.log(data);
                 $('#result').append(JSON.stringify(data)); //返回内容绑定到ID为result的标签
                  if (data.code === 200) {
-                    str = '<div class="atalk"><img alt="" src="../assets/images/kefu.png" width="30" height="30"/>&nbsp;<span>' + data.newslist[0].reply +'</span></div>' ;
+                    str = '<div class="atalk"><img alt="" src='+ imagea +' width="30" height="30"/>&nbsp;<span>' + data.newslist[0].reply +'</span></div><div class="clear"></div>' ;
                     // 将之前的内容与要发的内容拼接好 提交
                     Words.innerHTML = Words.innerHTML + str;
                     $(" #talkwords").val("");
                 }
                 else {
-                    str = '<div class="atalk"><img alt="" src="../assets/images/kefu.png" width="30" height="30"/>&nbsp;<span>' + data.newslist[0].reply +'</span></div>' ;
+                    str = '<div class="atalk"><img alt="" src='+ imagea +' width="30" height="30"/>&nbsp;<span>' + data.newslist[0].reply +'</span></div><div class="clear"></div>' ;
                     // 将之前的内容与要发的内容拼接好 提交
                     Words.innerHTML = Words.innerHTML + str;
                     $(" #talkwords").val("");
@@ -70,8 +72,9 @@ export default class Robot extends Component{
                 <Nav />
                 <div className="talk_con" id="talk_con_id">
                     <div className="talk_show" id="words">
-                        <div className="atalk"><img src={require("../assets/images/kefu.png")} alt="" width="30" height="30"/>&nbsp;<span id="asay">Hi,我是你的小助手Anatee，很高兴为你服务！想说什么，随时告诉我!回复88可以退出聊天。</span></div>
-                        <div className="btalk"><span id="bsay">好的呢！</span>&nbsp;<img src={require("../assets/images/boy.jpg")} alt="" width="30" height="30"/></div>
+                        <div className="atalk"><img src={require("../assets/images/kefu.png").default} alt="" width="30" height="30"/>&nbsp;<span id="asay">Hi,我是你的小助手Anatee，很高兴为你服务！想说什么，随时告诉我!</span></div>
+                        <div className="btalk"><span id="bsay">好的呢！</span>&nbsp;<img src={require("../assets/images/boy.jpg").default} alt="" width="30" height="30"/></div>
+                        <div className="clear"></div>
                     </div>
                     <div className="talk_input"  id="talk_input_id">
                         <input type="text" className="talk_word" id="talkwords" onKeyPress={this.InputPress}/>

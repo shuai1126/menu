@@ -31,7 +31,7 @@ export default class Classification extends Component {
                                 width: "22px",
                                 height: "22px"
                             }}
-                            src={require("../assets/images/kefu.png")}
+                            src={require("../assets/images/kefu.png").default}
                             alt=""
                         />
                     </div>
@@ -48,7 +48,7 @@ export default class Classification extends Component {
                                 return <div className={key}>{types[key]}</div>
                             })
                         }
-                       <div className="name1">水产</div>
+                       <div className="name1" onClick={() => {this.props.history.push("/seafood");}}>水产</div>
                        <div className="name2" onClick={() => {this.props.history.push("/meat");}}>肉类</div>
                     </div>
                     <div className="type-box">

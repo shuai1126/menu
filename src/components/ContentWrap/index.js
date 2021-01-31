@@ -18,6 +18,7 @@ import Bake from "../../pages/bake";
 import Question from "../../pages/question";
 import Process from "../../pages/detail";
 import TodoApp from "../../pages/user/index";
+import Seafood from "../../pages/seafood";
 
 export default class ConentWrap extends Component {
     constructor(props) {
@@ -64,6 +65,11 @@ export default class ConentWrap extends Component {
                                 exact
                                 path="/bake"
                                 component={Bake}
+                            ></Route>
+                              <Route
+                                exact
+                                path="/seafood"
+                                component={Seafood}
                             ></Route>
                             <Route
                                 exact

@@ -1,40 +1,32 @@
-import React, { PureComponent as Component } from "react";
+import React from "react";
 import "../styles/public.scss";
 import { StarTwoTone } from '@ant-design/icons';
 import Nav from '../components/Nav/nav';
 
-
-const total = 100;
+const total = 40;
 const dishes = [
-    {"pic":"carrot","name":"胭脂萝卜","didCount":"75260","collect":"6714"},
-    {"pic":"green","name":"青菜","didCount":"76260","collect":"1514"},
-    {"pic":"cauliflower","name":"花菜","didCount":"23260","collect":"7414"},
-    {"pic":"fennel","name":"茴香","didCount":"75260","collect":"8714"},
-    {"pic":"okra","name":"秋葵","didCount":"76260","collect":"5514"},
-    {"pic":"snow-bean","name":"荷兰豆","didCount":"3260","collect":"9414"},
-    {"pic":"spinach","name":"菠菜","didCount":"75260","collect":"9714"},
-    {"pic":"chives","name":"韭菜","didCount":"126260","collect":"4514"},
-    {"pic":"fungus","name":"银耳","didCount":"29260","collect":"8414"}
+    {"pic":"sea1","name":"爆辣海螺","didCount":"7520","collect":"9714"},
+    {"pic":"sea2","name":"空气炸锅小黄鱼","didCount":"7660","collect":"1514"},
+    {"pic":"sea3","name":"爆炒鱿鱼卷","didCount":"26320","collect":"7514"},
+    {"pic":"sea4","name":"香辣扇贝肉","didCount":"75060","collect":"1714"},
+    {"pic":"sea5","name":"香辣虾尾","didCount":"76260","collect":"5314"},
+    {"pic":"sea6","name":"香辣花甲","didCount":"66260","collect":"2414"},
+    {"pic":"sea7","name":"浇汁鲍鱼","didCount":"77260","collect":"9714"},
+    {"pic":"sea8","name":"毛豆炒螃蟹","didCount":"12260","collect":"4544"},
+    {"pic":"sea9","name":"酱炒螺蛳","didCount":"29262","collect":"8714"}
 ];
 
-export default class Vegetables extends Component{
-    constructor() {
-        super();
-        this.state = {};
-    }
-    
+export default class Seafood extends React.Component{
     render() {
         return(
             <div>
                 <Nav />
                 <div className="top">
-                    <img alt="" src={require("../assets/images/vegetables.jpg").default}/>
+                    <img alt="" src={require("../assets/images/meat.jpg").default}/>
                     <div className="info">
-                        <h1 className="title">蔬菜</h1>
-                        <p>蔬菜是指可以做菜、烹饪成为食品的一类植物或菌类，蔬菜是人们日常饮食中必不可少的食物之一。
-                        蔬菜可提供人体所必需的多种维生素和矿物质等营养物质。
-                        据国际物质粮农组织1990年统计，人体必需的维生素C的90%、维生素A的60%来自蔬菜。
-                        </p>
+                        <h1 className="title">水产</h1>
+                        <p>水产食品是指海洋、江河中蕴藏着大量的鱼类、海带类、浮游生物、海藻等海生动植物，是取之不尽、用之不竭的天然宝库，这些食物资源将被人们科学的开发和利用，为人类的生存和生活服务。
+                        海洋、江河中的水产食品也是未来食品的开发方向。</p>
                     </div>
                 </div>
                 <div className="content">

@@ -3,7 +3,7 @@ import "../assets/css/hovertreeanswer.css";
 import $ from "jquery";
 import Nav from "../components/Nav/nav";
 import swal from 'sweetalert';
-import { withRouter } from "react-router-dom";
+import {withRouter} from "react-router-dom";
 
 $.fn.answerSheet = function (options) {
     var defaults = {
@@ -62,15 +62,44 @@ $(function(){
     $("#answer").answerSheet({});
 })
 
+
 class Question extends Component{
-    static complete(){
+    constructor() {
+        super();
+        this.state = {};
+    }
+
+    componentDidMount() {
+        if(window.location.href === ("http://localhost:"+window.location.port+"/question")){
+            window.location.href += "#";
+            window.location.reload();
+        }
+    }
+
+    complete = ()=>{
+        // swal({
+        //     title: "",
+        //     text: "恭喜你完成所有问题！",
+        //     type: 'success',
+        //     confirmButtonColor:"#1aad19",
+        //     confirmButtonText: "确定",
+        // });
         swal({
-            title: "",
             text: "恭喜你完成所有问题！",
-            type: 'success',
-            confirmButtonColor:"#1aad19",
-            confirmButtonText: "确定",
-        });
+            content: "",
+            buttons: {
+              confirm: {
+                /*
+                 * We need to initialize the value of the button to
+                 * an empty string instead of "true":
+                 */
+                value: "",
+              },
+            },
+          })
+          .then(() => {
+            this.props.history.push("/home");
+          });
     }
     render(){
         return(
@@ -81,23 +110,23 @@ class Question extends Component{
                     <div id="answer" className="card_wrap">
                         <div className="card_cont card1">
                             <div className="card">
-                                <p className="question"><span>Q1、</span>你接触过的第一种框架是什么？</p>
+                                <p className="question"><span>Q1、</span>你最喜欢做什么菜？</p>
                                 <ul className="select">
                                     <li>
                                         <input id="q1_1" type="radio" name="r-group-1"/>
-                                        <label htmlFor="q1_1">Django</label>
+                                        <label htmlFor="q1_1">糖醋排骨</label>
                                     </li>
                                     <li>
                                         <input id="q1_2" type="radio" name="r-group-1"/>
-                                        <label htmlFor="q1_2">Vue</label>
+                                        <label htmlFor="q1_2">红烧里脊</label>
                                     </li>
                                     <li>
                                         <input id="q1_3" type="radio" name="r-group-1"/>
-                                        <label htmlFor="q1_3">React</label>
+                                        <label htmlFor="q1_3">剁椒鱼头</label>
                                     </li>
                                     <li>
                                         <input id="q1_4" type="radio" name="r-group-1"/>
-                                        <label htmlFor="q1_4">Bootsrap</label>
+                                        <label htmlFor="q1_4">香菇滑鸡</label>
                                     </li>
                                     <li>
                                         <input id="q1_5" type="radio" name="r-group-1"/>
@@ -109,27 +138,27 @@ class Question extends Component{
                         </div>
                         <div className="card_cont card2">
                             <div className="card">
-                                <p className="question"><span>Q2、</span>你主要从事的开发设计工作是？</p>
+                                <p className="question"><span>Q2、</span>你经常使用APP做菜吗？</p>
                                 <ul className="select">
                                     <li>
                                         <input id="q2_1" type="radio" name="r-group-2"/>
-                                        <label htmlFor="q2_1">Web前端</label>
+                                        <label htmlFor="q2_1">总是</label>
                                     </li>
                                     <li>
                                         <input id="q2_2" type="radio" name="r-group-2"/>
-                                        <label htmlFor="q2_2">安卓软件开发</label>
+                                        <label htmlFor="q2_2">经常</label>
                                     </li>
                                     <li>
                                         <input id="q2_3" type="radio" name="r-group-2"/>
-                                        <label htmlFor="q2_3">IOS软件开发</label>
+                                        <label htmlFor="q2_3">偶尔</label>
                                     </li>
                                     <li>
                                         <input id="q2_4" type="radio" name="r-group-2"/>
-                                        <label htmlFor="q2_4">网站、软件维护</label>
+                                        <label htmlFor="q2_4">几乎不</label>
                                     </li>
                                     <li>
                                         <input id="q2_5" type="radio" name="r-group-2"/>
-                                        <label htmlFor="q2_5">数据库开发管理</label>
+                                        <label htmlFor="q2_5">从不</label>
                                     </li>
                                 </ul>
                                 <div className="card_bottom"><a href="#" className="prev">上一题</a><span><b>2</b>/5</span></div>
@@ -137,23 +166,23 @@ class Question extends Component{
                         </div>
                         <div className="card_cont card3">
                             <div className="card">
-                                <p className="question"><span>Q3、</span>你遇到问题喜欢在哪里寻找解决方案？</p>
+                                <p className="question"><span>Q3、</span>你认为这款APP有什么不足之处？</p>
                                 <ul className="select">
                                     <li>
                                         <input id="q3_1" type="radio" name="r-group-3"/>
-                                        <label htmlFor="q3_1">何问起（http://hovertree.com/）</label>
+                                        <label htmlFor="q3_1">很好，没问题</label>
                                     </li>
                                     <li>
                                         <input id="q3_2" type="radio" name="r-group-3"/>
-                                        <label htmlFor="q3_2">博客园（http://www.cnblogs.com/）</label>
+                                        <label htmlFor="q3_2">基本满足用户需求</label>
                                     </li>
                                     <li>
                                         <input id="q3_3" type="radio" name="r-group-3"/>
-                                        <label htmlFor="q3_3">柯乐义（http://keleyi.com/）</label>
+                                        <label htmlFor="q3_3">功能简陋</label>
                                     </li>
                                     <li>
                                         <input id="q3_4" type="radio" name="r-group-3"/>
-                                        <label htmlFor="q3_4">CSDN（http://www.csdn.net/）</label>
+                                        <label htmlFor="q3_4">样式简单</label>
                                     </li>
                                     <li>
                                         <input id="q3_5" type="radio" name="r-group-3"/>
@@ -165,7 +194,7 @@ class Question extends Component{
                         </div>
                         <div className="card_cont">
                             <div className="card">
-                                <p className="question"><span>Q4、</span>你开发中使用的主要操作系统是？</p>
+                                <p className="question"><span>Q4、</span>你开发APP中使用的主要操作系统是？</p>
                                 <ul className="select">
                                     <li>
                                         <input id="q4_1" type="radio" name="r-group-4"/>
@@ -193,27 +222,27 @@ class Question extends Component{
                         </div>
                         <div className="card_cont">
                             <div className="card">
-                                <p className="question"><span>Q5、</span>你觉得下面哪个栏目最实用？</p>
+                                <p className="question"><span>Q5、</span>你第一次使用的框架是什么？</p>
                                 <ul className="select">
                                     <li>
                                         <input id="q5_1" type="radio" name="r-group-5"/>
-                                        <label htmlFor="q5_1">网页特效 http://hovertree.com/menu/texiao/</label>
+                                        <label htmlFor="q5_1">React</label>
                                     </li>
                                     <li>
                                         <input id="q5_2" type="radio" name="r-group-5"/>
-                                        <label htmlFor="q5_2">在线题库 http://hovertree.com/tiku/</label>
+                                        <label htmlFor="q5_2">Vue</label>
                                     </li>
                                     <li>
                                         <input id="q5_3" type="radio" name="r-group-5"/>
-                                        <label htmlFor="q5_3">jQuery下载 http://hovertree.com/h/bjaf/ati6k7yk.htm</label>
+                                        <label htmlFor="q5_3">Django</label>
                                     </li>
                                     <li>
                                         <input id="q5_4" type="radio" name="r-group-5"/>
-                                        <label htmlFor="q5_4">图片 http://hovertree.com/hvtimg/</label>
+                                        <label htmlFor="q5_4">Bootsrap</label>
                                     </li>
                                     <li>
                                         <input id="q5_5" type="radio" name="r-group-5"/>
-                                        <label htmlFor="q5_5">代码 http://hovertree.com/code/</label>
+                                        <label htmlFor="q5_5">其他</label>
                                     </li>
                                 </ul>
                                 <div className="card_bottom"><a herf="" className="prev">上一题</a><span><b>5</b>/5</span></div>
@@ -227,7 +256,7 @@ class Question extends Component{
                                         更多信息请联系QQ1941816504。
                                     </li>
                                 </ul>
-                                <div className="card_bottom"><a className="prev">上一题</a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a onClick={Question.complete}>完成</a></div>
+                                <div className="card_bottom"><a className="prev">上一题</a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a onClick={this.complete}>完成</a></div>
                             </div>
                         </div>
                     </div>
