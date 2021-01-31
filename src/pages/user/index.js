@@ -6,7 +6,7 @@ import ClassIcon from '@material-ui/icons/ClassOutlined'
 import CommentIcon from '@material-ui/icons/CommentOutlined'
 import ShareIcon from '@material-ui/icons/ShareOutlined'
 import SettingIcon from '@material-ui/icons/SettingsOutlined'
-class TodoApp extends Component {
+class User extends Component {
   constructor(props) {
     super(props);
     this.state = { items: [], text: '' };
@@ -21,11 +21,11 @@ class TodoApp extends Component {
           <div id="title">开启美食之旅<span class="title-logo"><AccountIcon /></span></div>
           <div id="setlist">
             <ul>
-              <li>我的收藏<span class="logo"><StarIcon /></span> </li><hr/>
-              <li>我的课程<span class="logo"><ClassIcon /> </span></li><hr/>
-              <li>意见反馈<span class="logo"><CommentIcon /> </span></li><hr/>
-              <li>分享给朋友<span class="logo"><ShareIcon /> </span></li><hr/>
-              <li>设置<span class="logo"><SettingIcon /> </span></li>
+              <li class="set-item">我的收藏<span class="logo"><StarIcon /></span> </li><hr/>
+              <li class="set-item">我的课程<span class="logo"><ClassIcon /> </span></li><hr/>
+              <li class="set-item">意见反馈<span class="logo"><CommentIcon /> </span></li><hr/>
+              <li class="set-item">分享给朋友<span class="logo"><ShareIcon /> </span></li><hr/>
+              <li class="set-item">设置<span class="logo"><SettingIcon /> </span></li>
             </ul>
           </div>
         </div>
@@ -54,17 +54,6 @@ class TodoApp extends Component {
 }
 
 
-class TodoList extends Component {
-  render() {
-    return (
-      <ul>
-        {this.props.items.map(item => (
-          <li key={item.id}>{item.text}</li>
-        ))}
-      </ul>
-    );
-  }
-}
 
 
-export default TodoApp;
+export default User;

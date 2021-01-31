@@ -1,20 +1,17 @@
 ul{
     list-style-type: none;
 }
-li{
-    /*height: 15px;*/
-    /*line-height: 15px;*/
-    /*padding-top: 15px;*/
-    /*padding-bottom: 15px;*/
-    /*font-size: 15px;*/
+li.set-item{
+    line-height: 3em;
+    font-size: 2em;
+    height: 3em;
 }
 
 #title{
-    font-size: 25px;
-    padding: 15px;
-    height: 60px;
-    line-height: 60px;
-    margin-top: 20px;
+    font-size: 3em;
+    padding: 1em;
+    line-height: 3em;
+    margin-top: 1em;
 }
 #setlist{
     padding:15px;
@@ -23,9 +20,10 @@ li{
     float:right
 }
 .logo svg{
-    font-size: 16px;
+    font-size: 1em;
+    line-height: 1.5em;
 }
 
 .title-logo svg{
-    font-size: 60px;
+    font-size: 3em;
 }
