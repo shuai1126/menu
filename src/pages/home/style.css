@@ -28,6 +28,25 @@
   background-color: #bbb;
   padding: 20px;
 }
+.leftRow{
+  height: 20px;
+  width: 20px;
+  border-right: 5px solid black;
+  border-top: 5px solid black;
+  padding:3px;
+  transform: rotate(-135deg);
+  opacity: 0.3;
+}
+.rightRow{
+  height: 20px;
+  width: 20px;
+  border-right: 5px solid black;
+  border-top: 5px solid black;
+  padding:3px;
+  transform: rotate(45deg);
+  opacity: 0.3;
+
+}
 
 .hot-recipe {
   margin-top: 10px;
@@ -49,4 +68,125 @@
 svg {
   height: 30px;
   width: 30px;
+}
+/* ajia */
+.contain {
+  position: relative;
+  top: 50%;
+  left: 50%;
+  widows: 100%;;
+  height: 250px;
+  /* transition: all .8s; */
+  transform: translateX(-50%);
+  /* color:red; */
+  overflow: hidden;
+  cursor: pointer;
+}
+.contain1 {
+  position: relative;
+  top: 50%;
+  left: 50%;
+  widows: 100%;;
+  height: 200px;
+  /* transition: all .8s; */
+  transform: translateX(-50%);
+  /* color:red; */
+  overflow: hidden;
+  cursor: pointer;
+}
+.contain .ul {
+   height: 100%;
+   list-style: none;     position: absolute;
+   top: 0px;
+   width: 100%;
+   height: 100%;
+}
+/* .contain1 .ul {
+  height: 100%;
+  list-style: none;     position: absolute;
+  top: 0px;
+  width: 100%;
+  height: 100%;
+} */
+.ul li.show{
+  display: block;
+}
+.ul li {
+  display: none;
+}
+.ul li img {
+  width: 100%;
+  height: 100%;
+}
+
+.ul1 li.show{
+  display: block;
+}
+.ul1 li {
+  display: none;
+}
+.ul1 li img {
+  width: 100%;
+
+}
+.contain  .dots {
+   position: absolute;
+   left: 50%;
+   bottom: 30px;
+   height: 10px;
+   transform: translateX(-50%);
+}
+.contain1  .dots {
+  position: absolute;
+  left: 50%;
+  bottom: 30px;
+  height: 10px;
+  transform: translateX(-50%);
+}
+.dots li {
+  float: left;
+  width: 10px;
+  height: 10px;
+  margin: 0px 5px;
+  border-radius: 50%;
+  transition: all .3s;
+  background-color: antiquewhite;
+  list-style: none;
+}
+.dots li.active {
+ background-color: blue;
+}
+.control .left {
+  position: absolute;
+  top: 50%;
+  left: 10px;
+  padding: 5px;
+  transform: translateY(-50%);
+  font-size: 20px;
+  cursor: pointer;
+}
+
+.control .right {
+  position: absolute;
+  top: 50%;
+  right: 10px;
+  padding: 5px;
+  transform: translateY(-50%);
+  font-size: 20px;
+  cursor: pointer;
+}
+.control .right:hover {
+  background-color: rgba(0, 0, 0, .3);
+}
+.control .left:hover {
+  background-color:  rgba(0, 0, 0, .3);
+}
+
+.ReactCarouse3 img{
+  /* width: 10%;
+  height: 100%; */
+  /* position: relative;
+  left: 2000px;*/
+  width: 300px;
+  height: 180px; 
 }
