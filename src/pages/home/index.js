@@ -8,8 +8,33 @@ class Home extends Component {
   constructor(props) {
     super(props);
     this.state = {
+      imgs: [
+        'https://seopic.699pic.com/photo/50140/6207.jpg_wh1200.jpg',
+        'https://seopic.699pic.com/photo/50072/2031.jpg_wh1200.jpg',
+        'https://seopic.699pic.com/photo/50092/7677.jpg_wh1200.jpg',
+        'https://seopic.699pic.com/photo/50074/8934.jpg_wh1200.jpg',
+        'https://seopic.699pic.com/photo/50134/5023.jpg_wh1200.jpg',
+        'https://goss1.cfp.cn/creative/vcg/800/new/VCG211294679022.jpg',
+      ],//图片数组
+      imgs1: [
+        'https://seopic.699pic.com/photo/50125/1302.jpg_wh1200.jpg',
+        'https://seopic.699pic.com/photo/50086/5096.jpg_wh1200.jpg',
+        'https://goss.cfp.cn/creative/vcg/800/new/VCG211184353525-JZL.jpg',
+      ],
+      imgs2: [
+        'https://seopic.699pic.com/photo/50099/7157.jpg_wh1200.jpg',
+        'https://seopic.699pic.com/photo/50134/5023.jpg_wh1200.jpg',
+        'https://goss1.cfp.cn/creative/vcg/800/new/VCG211294679022.jpg',
+      ],
+      showIndex: 0,//显示第几个图片
+      showIndex1: 0,//显示第几个图片
+      showIndex2: 0,//显示第几个图片
+      timer: null,//定时器
+      timer1: null,
+      show: false,//前后按钮
       tinyTitle: [
         {
+
           img: (
             <svg t="1612010426322" class="icon" viewBox="0 0 1024 1024" version="1.1" xmlns="http://www.w3.org/2000/svg" p-id="840" width="200" height="200">
               <path d="M955.1 466.6c-5.5-8.4-14.9-13.4-24.9-13.4H625.5V181.8c0-47.3-38.4-85.8-85.6-85.8h-55.8c-47.2 0-85.6 38.5-85.6 85.8v161.7c0 0.7 0 1.4 0.1 2.1 0 0.4 1.9 40.2-26.3 70.5-23 24.7-60.4 37.2-111.2 37.2H64V928h698.9c11.9 0 22.7-7.1 27.5-18.1l167.3-415c3.8-9.3 2.9-19.9-2.6-28.3zM123.7 513h107.5v355.4H123.7V513z m619.5 355.2H291V511.7c53.6-4.9 95.5-23.3 125-54.9 43-46.2 42.7-104.2 42.3-114.1v-161c0-14.3 11.6-25.9 25.9-25.9H540c14.3 0 25.9 11.6 25.9 25.9v273.4h2V513H885L743.2 868.2z" fill="#ff6633" p-id="841"></path>
@@ -96,13 +121,47 @@ class Home extends Component {
       ],
     };
   }
-  render() {
+  render () {
     const { tinyTitle, hotRecipe } = this.state;
     return (
       <div>
         <TopBanner></TopBanner>
         <div className="home-content">
-          <div className="carousel">这是轮播图</div>
+          <div className="ReactCarousel">
+            <div className="contain">
+              <ul className="ul">
+                {
+                  this.state.imgs.map((value, index) => {
+                    return (
+                      <li className={index === this.state.showIndex ? 'show' : ''} key={index}>
+                        <img src={value} alt="轮播图" />
+                      </li>
+                    )
+                  })
+                }
+              </ul>
+              {/* 下面的轮播图小按钮 */}
+              <ul className="dots" style={{ width: this.state.imgs.length * 20 + 'px' }}>
+                {
+                  this.state.imgs.map((value, index) => {
+                    return (
+                      <li key={index}
+                        className={index === this.state.showIndex ? 'active' : ''}
+                        onClick={() => { this.change(index) }}>
+                      </li>)
+                  })
+                }
+              </ul>
+              <div className="control">
+                <span className="left" onClick={(e) => { this.previous(e) }}>
+                  <div className="leftRow"></div>
+                </span>
+                <span className="right" onClick={(e) => { this.next(e) }}>
+                  <div className="rightRow"></div>
+                </span>
+              </div>
+            </div>
+          </div>
           <div className="home-tinyTitle">
             {tinyTitle.map((item) => {
               return (
@@ -113,7 +172,35 @@ class Home extends Component {
               );
             })}
           </div>
-          <div className="carousel">这是轮播图</div>
+          {/* ajia-第二个轮播图 */}
+          <div className="ReactCarouse">
+            <div className="contain">
+              <ul className="ul">
+                {
+                  this.state.imgs1.map((value, index) => {
+                    return (
+                      <li className={index === this.state.showIndex1 ? 'show' : ''} key={index}>
+                        {/* <img src={require((value)+"")}  alt="轮播图" /> */}
+                        <img src={value} alt="轮播图" />
+                      </li>
+                    )
+                  })
+                }
+              </ul>
+              {/* 下面的轮播图小按钮 */}
+              <ul className="dots" style={{ width: this.state.imgs1.length * 20 + 'px' }}>
+                {
+                  this.state.imgs1.map((value, index) => {
+                    return (
+                      <li key={index}
+                        className={index === this.state.showIndex1 ? 'active' : ''}
+                        onClick={() => { this.change1(index) }}>
+                      </li>)
+                  })
+                }
+              </ul>
+            </div>
+          </div>
           {/* 热门菜谱 */}
           <div className="hot-recipe">
             <HomeMenuHeader title="热门菜谱" />
@@ -127,7 +214,34 @@ class Home extends Component {
             </div>
           </div>
           {/*  */}
-          <div className="carousel">这是轮播图</div>
+          <div className="ReactCarouse3">
+            <div className="contain1">
+              <ul className="ul1">
+                {
+                  this.state.imgs2.map((value, index) => {
+                    return (
+                      <li className={index === this.state.showIndex2 ? 'show' : ''} key={index}>
+                        {/* <img src={require((value)+"")}  alt="轮播图" /> */}
+                        <img src={value} alt="轮播图" />
+                      </li>
+                    )
+                  })
+                }
+              </ul>
+              {/* 下面的轮播图小按钮 */}
+              <ul className="dots" style={{ width: this.state.imgs1.length * 20 + 'px' }}>
+                {
+                  this.state.imgs1.map((value, index) => {
+                    return (
+                      <li key={index}
+                        className={index === this.state.showIndex2 ? 'active' : ''}
+                        onClick={() => { this.change1(index) }}>
+                      </li>)
+                  })
+                }
+              </ul>
+            </div>
+          </div>
           {/* 精选课程 */}
           <div className="hot-recipe">
             <HomeMenuHeader title="精选课程" />
@@ -147,13 +261,102 @@ class Home extends Component {
             <span className="line"></span>
           </div>
           {/* 占位  */}
-          <div style={{height: '58px'}}>
-              
+          <div style={{ height: '58px' }}>
+
           </div>
         </div>
       </div>
     );
   }
+  //一开始自动播放
+  componentDidMount () {
+    this.start();
+  }
+  //销毁前清楚定时器
+  componentWillMount () {
+    this.stop();
+  }
+  //暂停
+  stop = () => {
+    let { timer } = this.state;
+    clearInterval(timer);
+  }
+  //开始
+  start = () => {
+    let { timer } = this.state;
+    timer = setInterval(() => {
+      this.next();
+    }, 3000);
+    this.setState({
+      timer
+    })
+  }
+
+  start1 = () => {
+    let { timer1 } = this.state;
+    timer1 = setInterval(() => {
+      this.next();
+    }, 1000);
+    this.setState({
+      timer1
+    })
+  }
+
+  //点击下面的按钮切换当前显示的图片
+  change = (index) => {
+    let { showIndex } = this.state;
+    showIndex = index;
+    this.setState({
+      showIndex
+    })
+  }
+  change1 = (index) => {
+    let { showIndex1 } = this.state;
+    showIndex1 = index;
+    this.setState({
+      showIndex1
+    })
+  }
+  previous = (e) => { //上一张
+    let ev = e || window.event;
+    let { showIndex, imgs } = this.state;
+    if (showIndex <= 0) {
+      showIndex = imgs.length - 1;
+    } else {
+      showIndex--;
+    }
+    this.setState({
+      showIndex
+    })
+  }
+
+  previous1 = (e) => { //上一张
+    let ev = e || window.event;
+    let { showIndex, imgs } = this.state;
+    if (showIndex <= 0) {
+      showIndex = imgs.length - 1;
+    } else {
+      showIndex--;
+    }
+    this.setState({
+      showIndex
+    })
+  }
+  next = (e) => { //下一张
+    let ev = e || window.event;
+    let { showIndex, imgs } = this.state;
+    if (showIndex >= imgs.length - 1) {
+      showIndex = 0;
+    } else {
+      showIndex++;
+    }
+    this.setState({
+      showIndex
+    })
+  }
+
+
+
 }
 
 export default withRouter(Home);
