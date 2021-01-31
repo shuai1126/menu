@@ -1,0 +1,21 @@
+.whole{
+   .table{
+       margin-top: 420px;
+       text-align: left;  
+       display: inline-block;
+       .row{
+            display: flex;
+           .col{
+                height: 60px;
+                width: 82px;
+                text-align: center;
+                // margin: 13px 13px;
+                line-height: 60px;
+           }
+       }
+        h2{
+            font-size: 14px;
+            color: grey;
+        }
+    } 
+}
