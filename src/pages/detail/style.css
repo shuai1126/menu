@@ -63,7 +63,7 @@
 .step p {
   font-size: 0.4rem;
   color: #383838;
-  /* line-height: .245rem; */
+  line-height: 0.545rem;
   padding-bottom: .15rem;
 }
 
