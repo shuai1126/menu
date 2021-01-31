@@ -1,0 +1,31 @@
+ul{
+    list-style-type: none;
+}
+li{
+    height: 15px;
+    line-height: 15px;
+    padding-top: 15px;
+    padding-bottom: 15px;
+    font-size: 15px;
+}
+
+#title{
+    font-size: 25px;
+    padding: 15px;
+    height: 60px;
+    line-height: 60px;
+    margin-top: 20px;
+}
+#setlist{
+    padding:15px;
+}
+.title-logo, .logo{
+    float:right
+}
+.logo svg{
+    font-size: 16px;
+}
+
+.title-logo svg{
+    font-size: 60px;
+}

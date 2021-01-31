@@ -1,0 +1,11 @@
+.app-title{
+  font-size: 1.16rem;
+  color: #fff;
+  background-color: rgb(255,102,51);
+  text-align: center;
+  line-height: 2.5;
+  position: fixed;
+  top: 0;
+  width: 100vw;
+  z-index: 999;
+}
