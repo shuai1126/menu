@@ -79,7 +79,7 @@ class Process extends Component {
           <h2 className="dish-title">{this.state.dishName} </h2>
         </section>
         <section>
-          <h3>用料</h3>
+          <h3 style={{fontSize : '20px'}}>用料</h3>
           <ul className="ingre-list">
             {Object.getOwnPropertyNames(this.state.data).map((key) => {
               return (
@@ -92,7 +92,7 @@ class Process extends Component {
           </ul>
         </section>
         <section>
-          <h3>做法</h3>
+          <h3 style={{fontSize : '20px', margin: '16px'}}>做法</h3>
           <ul className="make-list">
             {this.state.dishImgs.map((item, index) => {
               return (

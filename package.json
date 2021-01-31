@@ -5,7 +5,6 @@
   "dependencies": {
     "@material-ui/core": "^4.11.3",
     "@material-ui/icons": "^4.11.2",
-<<<<<<< HEAD
     "@ant-design/icons": "^4.4.0",
     "antd-mobile": "^2.3.1",
     "fastclick": "^1.0.6",
@@ -19,8 +18,7 @@
     "react-scripts": "3.2.0",
     "redux": "^4.0.4",
     "redux-logger": "^3.0.6",
-    "sweetalert": "^2.1.2"
-=======
+    "sweetalert": "^2.1.2",
     "@testing-library/jest-dom": "^5.11.9",
     "@testing-library/react": "^11.2.3",
     "@testing-library/user-event": "^12.6.2",
@@ -30,7 +28,6 @@
     "react-router-dom": "^5.2.0",
     "react-scripts": "4.0.1",
     "web-vitals": "^0.2.4"
->>>>>>> f4298ef10950e8d72c291ea72d25eeca20cc20da
   },
   "scripts": {
     "start": "react-app-rewired start",
