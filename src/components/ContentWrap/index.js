@@ -17,7 +17,7 @@ import Robot from "../../pages/robot";
 import Bake from "../../pages/bake";
 import Question from "../../pages/question";
 import Process from "../../pages/detail";
-import TodoApp from "../../pages/user/index";
+import User from "../../pages/user/index";
 import Seafood from "../../pages/seafood";
 
 export default class ConentWrap extends Component {
@@ -89,7 +89,7 @@ export default class ConentWrap extends Component {
                              <Route
                                 exact
                                 path="/user"
-                                component={TodoApp}
+                                component={User}
                             ></Route>
                             <Redirect exact path="/" to="/home"></Redirect>
                         </Switch>

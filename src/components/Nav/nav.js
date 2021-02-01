@@ -2,6 +2,7 @@ import React, { PureComponent as Component } from 'react';
 import { NavBar, Icon } from 'antd-mobile';
 import { withRouter } from "react-router-dom";
 import { FormOutlined } from "@ant-design/icons";
+import './style.css'
 
 class Nav extends Component{
     constructor() {
